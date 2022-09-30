@@ -3,12 +3,13 @@
 :root {
     --white: #fff;
     --black: #1c2b2d;
-    --blue: #31326f;
-    --light-blue: #005490;
-    --color-primary: #9d0191;
-    --color-sec: #db6400;
+    --blue: #073b4c;
+    --light-blue: #118ab2;
+    --color-primary: #ef476f;
+    --color-sec: #ffd166;
     --grey: #eee;
     --dark-grey: #222831;
+    --green: #06d6a0;
 }
 
 * {
@@ -35,7 +36,53 @@ img {
 }
 
 .container {
-    max-width: 900px;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--blue);
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-container {
+    height: 20%;
+    width: 40%;
+    margin-top: 15rem;
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed var(--color-sec);
+}
+
+.content-container * {
+    padding: 8px 5px;
+}
+
+.content-container #results {
+    border: 2px solid var(--color-sec);
+    border-radius: 0px 8px 0px 8px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 15px 0px;
+}
+
+.content-container input {
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    width: 80%
+}
+
+/* put in media responsiveness */
+@media only screen and (max-width: 650px) {
+    /* for input and main-container h1 */
+    .content-container h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }
